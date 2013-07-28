@@ -1,0 +1,27 @@
+/* volunteers block */
+.ggw-volunteers ul {
+	padding:0;
+	margin:0 0 10px 0;
+	float:left;
+	width:100%;
+}
+.ggw-volunteers li {
+	list-style-type:none;
+	float:left;
+	padding:3px;
+	margin:3px;
+	border:1px solid #CCC;
+}
+
+.ggw-volunteers li a,
+.ggw-volunteers li img {
+	display:block;
+	width:50px;
+	height:50px;
+	padding:0;
+	margin:0;
+}
+.ggw-volunteers .count {
+	font-size:20px;
+	font-weight:bold;
+}
