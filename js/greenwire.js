@@ -29,8 +29,8 @@ $.ggw.volunteers = function(el, config, param) {
 	// we merge the default and the given data using 'deep' extend feature
 	// see. http://api.jquery.com/jQuery.extend/
 	config = $.extend(true, {
-		baseUrl	: 'https://greenwire.greenpeace.org/api/',
-		dataUrl : 'public/volunteers.json?domain=netherlands&limit=70',
+		baseUrl	: 'https://greenwire.greenpeace.org/api/public/volunteers.json',
+		paramaters : '?domain=netherlands&limit=70',
 		selector : {
 			content	: '.block-content',
 			volunteers : '.block-content ul',
@@ -40,7 +40,8 @@ $.ggw.volunteers = function(el, config, param) {
 		template : {
 			members : '#volunteersTemplate',
 			volunteersTotal : '#volunteersTotalTemplate',
-			volunteersAvatar : '#volunteersAvatarTemplate'
+			volunteersAvatar : '#volunteersAvatarTemplate',
+			error : '#errorTemplate'
 		},
 	}, config || {});
 
@@ -54,16 +55,20 @@ $.ggw.volunteers = function(el, config, param) {
 		/**
 		 * Initialization method
 		 * Load the data and get the party started
-		 * @param uid string , the widget unique id
+		 * @param o, object the dom object
 		 */
-		function init(uid) {
-			widget = "#" + uid + " ";
+		function init(o) {
+			widget = "#" + $(o).attr('id') + " ";
+			param = $(o).attr('data-url-parameters')
+			if (param === undefined) {
+			   param = config.paramaters;
+			}
 
 			// check if the data are not already available
 			// only make one Ajax/JSON call 
 			if (response === undefined) {
 				$.ajax({
-					url: config.baseUrl + config.dataUrl,
+					url: config.baseUrl + '?' + param,
 					dataType : 'json',
 					xhrFields: {
 						withCredentials: true
@@ -120,6 +125,8 @@ $.ggw.volunteers = function(el, config, param) {
 		}
 
 		function renderError() {
+			$('.loading').css('display','none');
+
 			// Render the total template
 			$(config.template.error)
 				.tmpl()
@@ -129,7 +136,7 @@ $.ggw.volunteers = function(el, config, param) {
 
 		// Go widget, give them hell!
 		//alert(this.id);
-		init(this.id);
+		init(this);
 	});
 
 };
@@ -138,7 +145,6 @@ $.ggw.volunteers = function(el, config, param) {
 
 /* MAIN */
 /* volunteers widget */
-$.ggw.volunteers(('.js-ggw-volunteers'),{
-	baseUrl : 'http://localhost/ggw_widgets/json/',
-	dataUrl : 'volunteers.json'
+$.ggw.volunteers('.js-ggw-volunteers', {
+	baseUrl : 'http://localhost/ggw_widgets/json/volunteers.json'
 });
