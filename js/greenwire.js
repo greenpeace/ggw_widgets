@@ -125,6 +125,7 @@ $.ggw.volunteers = function(el, config, param) {
 		}
 
 		function renderError() {
+			$(config.selector.volunteers).css('display','none');
 			$('.loading').css('display','none');
 
 			// Render the total template
@@ -146,5 +147,5 @@ $.ggw.volunteers = function(el, config, param) {
 /* MAIN */
 /* volunteers widget */
 $.ggw.volunteers('.js-ggw-volunteers', {
-	baseUrl : 'http://localhost/ggw_widgets/json/volunteers.json'
+	baseUrl : 'http://localhost/ggw_widgets/json/volunteers-error.json'
 });
