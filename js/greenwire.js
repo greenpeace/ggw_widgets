@@ -168,7 +168,7 @@ $.ggw.events = function(el, config, param) {
 	// see. http://api.jquery.com/jQuery.extend/
 	config = $.extend(true, {
 		baseUrl	: 'https://greenwire.greenpeace.org/api/public/events.json',
-		parameters : '?domain=netherlands&limit=70',
+		parameters : '?domain=netherlands&limit=5',
 		maxdisplay: 0, // if 0 limit is used
 		selector : {
 			content	: '.block-content',
@@ -248,6 +248,10 @@ $.ggw.events = function(el, config, param) {
 			e = response['body']['events'];
 			imax = response['body']['events'].length;
 
+			if(config.maxdisplay > 0 && config.maxdisplay <= imax) {
+				imax = config.maxdisplay;
+			}
+
 			for (;i<imax;i++) {
 				$(config.template.eventsItem)
 					.tmpl([{
@@ -310,5 +314,6 @@ $.ggw.volunteers('.js-ggw-volunteers', {
 /* events widget */
 $.ggw.events('.js-ggw-events', {
 	//baseUrl : 'http://localhost/ggw_widgets/json/events.json'
-	baseUrl	: 'https://greenwire-stage.greenpeace.org/api/public/events.json'
+	baseUrl	: 'https://greenwire-stage.greenpeace.org/api/public/events.json',
+	maxdisplay : 5
 });
