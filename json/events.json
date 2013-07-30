@@ -1,0 +1,256 @@
+[
+    {
+        "header": {
+            "id": 1375106021,
+            "code": "200",
+            "status": "OK",
+            "error": "null",
+            "resources": "events",
+            "pagination": {
+                "limit": 5,
+                "page": 1,
+                "total": "604"
+            }
+        },
+        "body": {
+            "events": [
+                {
+                    "uuid": "2e88834f-e295-4ecb-9791-4ef4ab82a431",
+                    "serial": "5125",
+                    "name": "test33",
+                    "created": "2013-07-29 14:10:22",
+                    "modified": "2013-07-29 14:10:22",
+                    "location": {
+                        "country": "Nederland",
+                        "streetname": "",
+                        "postcode": "",
+                        "city": "Utrecht",
+                        "coordinates": {
+                            "latitude": "52.091790",
+                            "longitude": "5.114570"
+                        }
+                    },
+                    "description": " <p>test33</p>\n ",
+                    "start_date": "2013-07-30 22:00:00",
+                    "end_date": "2013-08-31 22:00:00",
+                    "picture": null,
+                    "event_type": null,
+                    "organizers": {
+                        "5972c711-4bc8-45f8-94f0-1ce506aad26e": {
+                            "uuid": "5972c711-4bc8-45f8-94f0-1ce506aad26e",
+                            "serial": "2",
+                            "firstname": "Bob",
+                            "lastname": "Hunter",
+                            "fullname": "Bob Hunter"
+                        }
+                    },
+                    "groups": {
+                        "5f272711-f5ee-4ca3-8a87-78815016c44f": {
+                            "uuid": "5f272711-f5ee-4ca3-8a87-78815016c44f",
+                            "serial": "11",
+                            "name": "Greenpeace Greenwire Nederland",
+                            "domain": "netherlands"
+                        }
+                    },
+                    "tags": []
+                },
+                {
+                    "uuid": "2ce8c641-6ba6-4c35-a1f6-d2ff195f2bf0",
+                    "serial": "5109",
+                    "name": "Chasing Ice Movie Screening",
+                    "created": "2013-07-27 17:24:23",
+                    "modified": "2013-07-27 17:24:23",
+                    "location": {
+                        "country": "United States",
+                        "streetname": "State Street",
+                        "postcode": "53703",
+                        "city": "Madison",
+                        "coordinates": {
+                            "latitude": "38.064317",
+                            "longitude": "-81.821171"
+                        }
+                    },
+                    "description": " <p>Watch a movie about melting ice from climate change and meet new friends.</p>\n ",
+                    "start_date": "2013-08-26 17:00:00",
+                    "end_date": "2013-08-28 19:00:00",
+                    "picture": null,
+                    "event_type": {
+                        "tid": "252",
+                        "vid": "10",
+                        "name": "Film Screening",
+                        "description": "",
+                        "format": null,
+                        "weight": "0",
+                        "uuid": "0425ea28-8d53-46ab-808a-66c1d7f68398",
+                        "language": "und",
+                        "i18n_tsid": "0",
+                        "vocabulary_machine_name": "event_type"
+                    },
+                    "organizers": {
+                        "6ba47c14-f557-4a00-9ecd-eb16a28ee7d4": {
+                            "uuid": "6ba47c14-f557-4a00-9ecd-eb16a28ee7d4",
+                            "serial": "2211",
+                            "firstname": "Mary",
+                            "lastname": "Nicol ",
+                            "fullname": "Mary Nicol "
+                        }
+                    },
+                    "groups": {
+                        "eccf589c-efd4-4846-bfb8-d36aaf161254": {
+                            "uuid": "eccf589c-efd4-4846-bfb8-d36aaf161254",
+                            "serial": "20",
+                            "name": "Greenpeace Greenwire USA",
+                            "domain": "usa"
+                        }
+                    },
+                    "tags": {
+                        "ca8a8f15-4428-44f6-a560-a9888af071b1": "sea ice",
+                        "362aac84-1cf1-438d-96ab-2b4b5c0edc0c": "Arctic"
+                    }
+                },
+                {
+                    "uuid": "ac36b6f8-a0df-4c14-ad28-fe38aa0a0e0a",
+                    "serial": "5104",
+                    "name": "Private one-time event for USA members only",
+                    "created": "2013-07-27 16:56:37",
+                    "modified": "2013-07-27 16:56:37",
+                    "location": {
+                        "country": "United States",
+                        "streetname": "State Street",
+                        "postcode": "53703",
+                        "city": "Madison",
+                        "coordinates": {
+                            "latitude": "43.074791",
+                            "longitude": "-89.390816"
+                        }
+                    },
+                    "description": " <p>test</p>\n ",
+                    "start_date": "2013-07-26 22:00:00",
+                    "end_date": "2013-10-01 22:00:00",
+                    "picture": null,
+                    "event_type": {
+                        "tid": "242",
+                        "vid": "10",
+                        "name": "Festival/Market etc",
+                        "description": "",
+                        "format": null,
+                        "weight": "0",
+                        "uuid": "c3139154-714c-4212-b692-f04448e4ecb5",
+                        "language": "und",
+                        "i18n_tsid": "0",
+                        "vocabulary_machine_name": "event_type"
+                    },
+                    "organizers": {
+                        "6f1e0fdc-7ee6-4fa8-aa7c-5dcc0b842e22": {
+                            "uuid": "6f1e0fdc-7ee6-4fa8-aa7c-5dcc0b842e22",
+                            "serial": "5234",
+                            "firstname": "Yoo",
+                            "lastname": "Lee",
+                            "fullname": "Yoo Lee"
+                        }
+                    },
+                    "groups": {
+                        "eccf589c-efd4-4846-bfb8-d36aaf161254": {
+                            "uuid": "eccf589c-efd4-4846-bfb8-d36aaf161254",
+                            "serial": "20",
+                            "name": "Greenpeace Greenwire USA",
+                            "domain": "usa"
+                        }
+                    },
+                    "tags": []
+                },
+                {
+                    "uuid": "10c5c46f-25f5-4433-9059-7127ad6b5d8a",
+                    "serial": "5102",
+                    "name": "Public one-time event",
+                    "created": "2013-07-27 16:54:23",
+                    "modified": "2013-07-27 16:54:23",
+                    "location": {
+                        "country": "United States",
+                        "streetname": "Madison St.",
+                        "postcode": "60602",
+                        "city": "Chicago",
+                        "coordinates": {
+                            "latitude": "41.881999",
+                            "longitude": "-87.633821"
+                        }
+                    },
+                    "description": " <p>public event</p>\n ",
+                    "start_date": "2013-07-26 22:00:00",
+                    "end_date": "2013-10-01 22:00:00",
+                    "picture": null,
+                    "event_type": {
+                        "tid": "253",
+                        "vid": "10",
+                        "name": "Party, Celebration",
+                        "description": "",
+                        "format": null,
+                        "weight": "0",
+                        "uuid": "6aca8a98-89ce-4885-962f-c75e697466a9",
+                        "language": "und",
+                        "i18n_tsid": "0",
+                        "vocabulary_machine_name": "event_type"
+                    },
+                    "organizers": {
+                        "6f1e0fdc-7ee6-4fa8-aa7c-5dcc0b842e22": {
+                            "uuid": "6f1e0fdc-7ee6-4fa8-aa7c-5dcc0b842e22",
+                            "serial": "5234",
+                            "firstname": "Yoo",
+                            "lastname": "Lee",
+                            "fullname": "Yoo Lee"
+                        }
+                    },
+                    "groups": {
+                        "eccf589c-efd4-4846-bfb8-d36aaf161254": {
+                            "uuid": "eccf589c-efd4-4846-bfb8-d36aaf161254",
+                            "serial": "20",
+                            "name": "Greenpeace Greenwire USA",
+                            "domain": "usa"
+                        }
+                    },
+                    "tags": []
+                },
+                {
+                    "uuid": "9f15518d-99ae-462b-97fb-afefe87b7179",
+                    "serial": "5099",
+                    "name": "event with starting date in past",
+                    "created": "2013-07-27 15:43:12",
+                    "modified": "2013-07-27 15:46:22",
+                    "location": {
+                        "country": "Nederland",
+                        "streetname": "",
+                        "postcode": "",
+                        "city": "leerdam",
+                        "coordinates": {
+                            "latitude": "51.894313",
+                            "longitude": "5.096927"
+                        }
+                    },
+                    "description": " <p>test</p>\n ",
+                    "start_date": "2013-07-27 10:00:00",
+                    "end_date": "2013-07-31 10:00:00",
+                    "picture": null,
+                    "event_type": null,
+                    "organizers": {
+                        "5e5859ec-33a2-41e7-b0ca-9e0d35f0025c": {
+                            "uuid": "5e5859ec-33a2-41e7-b0ca-9e0d35f0025c",
+                            "serial": "3",
+                            "firstname": "David",
+                            "lastname": "McTaggart",
+                            "fullname": "David McTaggart"
+                        }
+                    },
+                    "groups": {
+                        "5f272711-f5ee-4ca3-8a87-78815016c44f": {
+                            "uuid": "5f272711-f5ee-4ca3-8a87-78815016c44f",
+                            "serial": "11",
+                            "name": "Greenpeace Greenwire Nederland",
+                            "domain": "netherlands"
+                        }
+                    },
+                    "tags": []
+                }
+            ]
+        }
+    }
+]
