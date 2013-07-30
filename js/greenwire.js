@@ -197,7 +197,10 @@ $.ggw.events = function(el, config, param) {
 		 * @param o, object the dom object
 		 */
 		function init(o) {
-			moment.lang('nl');
+			var lang = $(o).attr('data-lang').toLowerCase();
+			if(lang != undefined) {
+				moment.lang(lang); // i18n files should be included
+			}
 
 			widget = "#" + $(o).attr('id') + " ";
 			param = $(o).attr('data-url-parameters')
