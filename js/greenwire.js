@@ -29,8 +29,9 @@ $.ggw.volunteers = function(el, config, param) {
 	// see. http://api.jquery.com/jQuery.extend/
 	config = $.extend(true, {
 		baseUrl	: 'https://greenwire.greenpeace.org/api/public/volunteers.json',
-		parameters : '?domain=netherlands&limit=70',
-		maxdisplay: 0, // if 0 limit is used
+		parameters : 'domain=netherlands&limit=70&page=2',
+		defaultAvatar : 'https://greenwire.greenpeace.org/sites/default/files/default_images/avatar_def_big.png',
+		maxdisplay: 20, // if 0 limit is used
 		selector : {
 			content	: '.block-content',
 			volunteers : '.block-content ul',
@@ -68,11 +69,11 @@ $.ggw.volunteers = function(el, config, param) {
 			// only make one Ajax/JSON call 
 			if (response === undefined) {
 				$.ajax({
-					url: config.baseUrl + '?' + param,
+					url: config.baseUrl,
+					data : param,
 					dataType : 'json',
-					type : 'get',
 					xhrFields: {
-						withCredentials: true
+						'withCredentials': true
 					},
 					success : function(data) {
 						response = data[0];
@@ -114,7 +115,7 @@ $.ggw.volunteers = function(el, config, param) {
 			}
 
 			for (;i<imax && j<jmax;i++) {
-				if(v[i]['avatar'] != null) {
+				if(v[i]['avatar'] != null && v[i]['avatar'] != config.defaultAvatar) {
 					j++;
 					$(config.template.volunteer)
 						.tmpl([{ avatar : v[i]['avatar']}])
@@ -168,7 +169,7 @@ $.ggw.events = function(el, config, param) {
 	// see. http://api.jquery.com/jQuery.extend/
 	config = $.extend(true, {
 		baseUrl	: 'https://greenwire.greenpeace.org/api/public/events.json',
-		parameters : '?domain=netherlands&limit=5',
+		parameters : 'domain=netherlands&limit=5',
 		maxdisplay: 0, // if 0 limit is used
 		selector : {
 			content	: '.block-content',
@@ -309,14 +310,14 @@ $.ggw.events = function(el, config, param) {
 	 ========================================================================== */
 /* volunteers widget */
 $.ggw.volunteers('.js-ggw-volunteers', {
-	//baseUrl : 'http://localhost/ggw_widgets/json/volunteers.json',
-	baseUrl	: 'https://greenwire-stage.greenpeace.org/api/public/volunteers.json',
+	//baseUrl : 'https://localhost/ggw_widgets/json/volunteers.json',
+	//baseUrl	: 'https://greenwire-stage.greenpeace.org/api/public/volunteers.json',
+	//baseUrl	: 'https://greenwire.greenpeace.org/api/public/volunteers.json',
 	maxdisplay : 12
 });
 
 /* events widget */
 $.ggw.events('.js-ggw-events', {
-	//baseUrl : 'http://localhost/ggw_widgets/json/events.json'
-	baseUrl	: 'https://greenwire-stage.greenpeace.org/api/public/events.json',
-	maxdisplay : 5
+	// baseUrl : 'http://localhost/ggw_widgets/json/events.json'
+	//baseUrl	: 'https://greenwire-stage.greenpeace.org/api/public/events.json'
 });
