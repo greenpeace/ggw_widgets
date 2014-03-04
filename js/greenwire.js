@@ -13,7 +13,7 @@ if (!$.ggw) {
 
 /* ==========================================================================
 	 Volunteers Widget
-	 ========================================================================== */
+   ========================================================================== */
 $.ggw.volunteers = function(el, config, param) {
 
 	// To avoid scope issues, use 'base' instead of 'this'
@@ -29,8 +29,7 @@ $.ggw.volunteers = function(el, config, param) {
 	// see. http://api.jquery.com/jQuery.extend/
 	config = $.extend(true, {
 		baseUrl	: 'https://greenwire.greenpeace.org/api/public/volunteers.json',
-		parameters : 'domain=netherlands&limit=70&page=2',
-		defaultAvatar : 'https://greenwire.greenpeace.org/sites/default/files/default_images/avatar_def_big.png',
+		parameters : 'domain=netherlands&page=1',
 		maxdisplay: 20, // if 0 limit is used
 		selector : {
 			content	: '.block-content',
@@ -50,7 +49,8 @@ $.ggw.volunteers = function(el, config, param) {
 	// for it also may need to chain itself to stuffs to get things done
 	return base.$el.each(function() {
 
-		var response;
+		var response_pictures;
+		var response_total;
 		var widget;
 
 		/**
@@ -67,17 +67,37 @@ $.ggw.volunteers = function(el, config, param) {
 
 			// check if the data are not already available
 			// only make one Ajax/JSON call 
-			if (response === undefined) {
+			if (response_pictures === undefined) {
 				$.ajax({
-					url: config.baseUrl,
-					data : param,
+					url: config.baseUrl ,
+					data : param + '&must_have_default_avatar=0&limit=12',
 					dataType : 'json',
 					xhrFields: {
 						'withCredentials': true
 					},
 					success : function(data) {
-						response = data[0];
+						response_pictures = data;
 						onVolunteersReady();
+					},
+					error : function() {
+						onError('ajax');
+					}
+				});
+			}
+
+			// check if the data are not already available
+			// only make one Ajax/JSON call 
+			if (response_total === undefined) {
+				$.ajax({
+					url: config.baseUrl,
+					data : param + '&limit=1',
+					dataType : 'json',
+					xhrFields: {
+						'withCredentials': true
+					},
+					success : function(data) {
+						response_total = data;
+						onTotalReady();
 					},
 					error : function() {
 						onError('ajax');
@@ -90,8 +110,19 @@ $.ggw.volunteers = function(el, config, param) {
 		 * Post initialization callback
 		 */
 		function onVolunteersReady() { 
-			if(response['header']['status'] === 'OK') {
+			if(response_pictures['header']['status'] === 'OK') {
 				renderVolunteers();
+			} else {
+				onError('status');
+			}
+		}
+
+		/**
+		 * Post initialization callback
+		 */
+		function onTotalReady() { 
+			if(response_total['header']['status'] === 'OK') {
+				renderTotal();
 			} else {
 				onError('status');
 			}
@@ -105,29 +136,22 @@ $.ggw.volunteers = function(el, config, param) {
 
 			// Render the volunteers template
 			i = 0;
-			v = response['body']['volunteers'];
-			imax = response['body']['volunteers'].length;
+			v = response_pictures['body']['volunteers'];
+			imax = config.maxdisplay;
 
-			j = 0;
-			jmax = config.maxdisplay;
-			if(jmax == 0) {
-				jmax = imax;
+			for (;i<imax;i++) {
+				$(config.template.volunteer)
+					.tmpl([{ avatar : v[i]['avatar']}])
+					.appendTo(widget + config.selector.volunteers);
 			}
 
-			for (;i<imax && j<jmax;i++) {
-				if(v[i]['avatar'] != null && v[i]['avatar'] != config.defaultAvatar) {
-					j++;
-					$(config.template.volunteer)
-						.tmpl([{ avatar : v[i]['avatar']}])
-						.appendTo(widget + config.selector.volunteers);
-				}
-			}
+		}
 
+		function renderTotal() {
 			// Render the total template
 			$(config.template.volunteersTotal)
-				.tmpl([{ total : response['header']['pagination']['total']}])
-				.appendTo(widget + config.selector.content);
-
+				.tmpl([{ total : response_total['header']['pagination']['total']}])
+				.appendTo(widget + config.selector.content);		
 		}
 
 		function onError(code) {
@@ -153,7 +177,7 @@ $.ggw.volunteers = function(el, config, param) {
 
 /* ==========================================================================
 	 Event Widget
-	 ========================================================================== */
+   ========================================================================== */
 $.ggw.events = function(el, config, param) {
 
 	// To avoid scope issues, use 'base' instead of 'this'
@@ -220,7 +244,7 @@ $.ggw.events = function(el, config, param) {
 						withCredentials: true
 					},
 					success : function(data) {
-						response = data[0];
+						response = data;
 						onEventsReady();
 					},
 					error : function() {
@@ -312,12 +336,15 @@ $.ggw.events = function(el, config, param) {
 $.ggw.volunteers('.js-ggw-volunteers', {
 	//baseUrl : 'https://localhost/ggw_widgets/json/volunteers.json',
 	//baseUrl	: 'https://greenwire-stage.greenpeace.org/api/public/volunteers.json',
-	//baseUrl	: 'https://greenwire.greenpeace.org/api/public/volunteers.json',
+	baseUrl	: 'https://greenwire.greenpeace.org/api/public/volunteers.json',
+	//baseUrl : 'http://www.greenpeace.nl/Global/nederland/greenwire/json/volunteers.json',
 	maxdisplay : 12
 });
 
 /* events widget */
 $.ggw.events('.js-ggw-events', {
 	// baseUrl : 'http://localhost/ggw_widgets/json/events.json'
-	//baseUrl	: 'https://greenwire-stage.greenpeace.org/api/public/events.json'
+	//baseUrl	: 'https://greenwire-stage.greenpeace.org/api/public/events.json',
+	baseUrl	: 'https://greenwire.greenpeace.org/api/public/events.json',
+	//baseUrl : 'http://www.greenpeace.nl/Global/nederland/greenwire/json/events.json'
 });
