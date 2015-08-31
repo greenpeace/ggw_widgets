@@ -11,8 +11,8 @@
         $.ggw = {};
     }
 
-    /* ==========================================================================
-     Event Widget
+  /* ==========================================================================
+     Event Map Widget
      ========================================================================== */
     $.ggw.eventsmap = function(el, config, param) {
 
@@ -29,8 +29,10 @@
         // see. http://api.jquery.com/jQuery.extend/
         config = $.extend(true, {
             baseUrl	: 'https://greenwire.greenpeace.org/api/public/events.json',
-            parameters : 'domain=netherlands&limit=20',
-            maxdisplay: 0, // if 0 limit is used
+            parameters : [{
+                domain : 'netherlands',
+                limit : 20
+            }],
             center: {  lat  : 51.3, long : 0.7 },
             maxzoom :12,
             minzoom : 1,
@@ -38,6 +40,15 @@
             selector : {
             },
             template : {
+                markerpopup : "#popupItemTemplate"
+            },
+            icons : {
+                events : { // see http://leafletjs.com/examples/custom-icons.html
+                    iconUrl: 'https://greenwire.greenpeace.org/sites/all/themes/ggw_int/images/map/marker-icon.png',
+                    shadowUrl: '',
+                    iconSize: [25, 41],
+                    popupAnchor: [0, -10]
+                }
             }
         }, config || {});
 
@@ -47,8 +58,54 @@
             // Variables
             var map;
             var response;
+            var clusters = [];
 
             function init(o) {
+                onInitMap(o);
+
+                // URL parameters can be defined in data extra or config
+                param = $(o).attr('data-url-parameters')
+                if (param === undefined) {
+                    param = config.parameters;
+                }
+
+                // for each countries
+                for (var i = 0; i < param.length ; i++) {
+
+                    // build the query string
+                    var p;
+                    var done = 0;
+
+                    if (typeof(param[i]) === 'object') {
+                        p = $.param(param[i]);
+                    }
+
+                    // query the url
+                    $.ajax({
+                        url: config.baseUrl + '?' + p,
+                        dataType : 'json',
+                        type : 'get',
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        success : function(data) {
+                            response = data;
+                            done++;
+                            onEventsReady();
+                            console.log(done);
+                            console.log(param.length);
+                            if(done == param.length) {
+                                onAllEventsReady();
+                            }
+                        },
+                        error : function() {
+                            onError('ajax');
+                        }
+                    });
+                }
+            }
+
+            function onInitMap(o) {
                 // set up the map
                 map = new L.Map($(o).attr('id'));
 
@@ -63,45 +120,36 @@
                 map.setView(new L.LatLng(config.center.lat,config.center.long), config.startzoom);
                 map.addLayer(osm);
 
-                // URL parameters can be defined in data extra or config
-                param = $(o).attr('data-url-parameters')
-                if (param === undefined) {
-                    param = config.parameters;
-                }
-
-                // check if the data are not already available
-                // only make one Ajax/JSON call
-                if (response === undefined) {
-                    $.ajax({
-                        url: config.baseUrl + '?' + param,
-                        dataType : 'json',
-                        type : 'get',
-                        xhrFields: {
-                            withCredentials: true
-                        },
-                        success : function(data) {
-                            response = data;
-                            onEventsReady();
-                        },
-                        error : function() {
-                            onError('ajax');
-                        }
-                    });
-                } else {
-                    onEventsReady();
-                }
-
+                // build the cluster groups
+                clusters['events'] = new L.MarkerClusterGroup();
             }
 
             function onEventsReady() {
                 e = response['body']['events'];
                 imax = response['body']['events'].length;
+                var tmpl = $.templates(config.template.markerpopup);
+                var eventIcon = L.icon(config.icons.events);
+                for (var i=0; i<imax; i++) {
+                    e[i]['friendly_date'] = moment(e[i]['start_date']).fromNow();
+                    clusters['events'].addLayer(new L.marker([
+                            e[i]['location']['coordinates']['latitude'],
+                            e[i]['location']['coordinates']['longitude']
+                        ], {icon: eventIcon})
+                        .bindPopup(tmpl(e[i]))
+                    );
+                }
+            }
 
-                for (var i=0;i<imax;i++) {
-                    var marker = L.marker([
-                        e[i]['location']['coordinates']['latitude'],
-                        e[i]['location']['coordinates']['longitude']
-                    ]).addTo(map);
+            function onAllEventsReady() {
+                console.log('alleventready');
+                map.addLayer(clusters['events']);
+            }
+
+            function onError(type) {
+                switch (type) {
+                    case 'ajax' :
+                        // oops something went wrong network wise
+                        break;
                 }
             }
 
@@ -122,5 +170,37 @@ $.ggw.eventsmap('#js-ggw-eventsmap', {
         lat : 52,
         long: 5
     },
-    startzoom : 7
+    center: {  lat  : 0, long : 0 },
+    maxzoom :12,
+    minzoom : 1,
+    startzoom : 2,
+    parameters : [{
+            domain : 'netherlands'
+        //},{
+        //    domain : 'thailand'
+        //},{
+        //    domain : 'belgium'
+        //},{
+        //    domain : 'russia'
+        //},{
+        //    domain : 'brazil'
+        //},{
+        //    domain : 'new-zealand'
+        //},{
+        //    domain : 'nordic'
+        //},{
+        //    domain : 'usa'
+        //},{
+        //    domain : 'uk'
+        //},{
+        //    domain : 'india'
+        //},{
+        //    domain : 'africa'
+        //},{
+        //    domain : 'canada'
+        //},{
+        //    domain : 'mexico'
+        //},{
+        //    domain : 'indonesia'
+    }]
 });

@@ -42,7 +42,7 @@ $.ggw.events = function(el, config, param) {
 			eventsTotal : '#eventsTotalTemplate',
 			eventsItem : '#eventsListItemTemplate',
 			error : '#errorTemplate'
-		},
+		}
 	}, config || {});
 
 	// The plugin return itself 
@@ -123,8 +123,8 @@ $.ggw.events = function(el, config, param) {
 						name : e[i]['name'],
 						start_date : moment(e[i]['start_date']).fromNow(),
 						latitude : e[i]['location']['coordinates']['latitude'],
-            longitude : e[i]['location']['coordinates']['longitude'],
-            description : e[i]['description'].replace(/<(?:.|\n)*?>/gm, '')
+            			longitude : e[i]['location']['coordinates']['longitude'],
+            			description : e[i]['description'].replace(/<(?:.|\n)*?>/gm, '')
 					}])
 					.appendTo(widget + config.selector.events);
 			}
