@@ -91,9 +91,11 @@
                         success : function(data) {
                             response = data;
                             done++;
-                            onEventsReady();
-                            console.log(done);
-                            console.log(param.length);
+                            if(response['body']['events'] != undefined) {
+                                onEventsReady(response['body']['events']);
+                            } else {
+                                //console.log('undefined for:' + done);
+                            }
                             if(done == param.length) {
                                 onAllEventsReady();
                             }
@@ -122,11 +124,11 @@
 
                 // build the cluster groups
                 clusters['events'] = new L.MarkerClusterGroup();
+                map.addLayer(clusters['events']);
             }
 
-            function onEventsReady() {
-                e = response['body']['events'];
-                imax = response['body']['events'].length;
+            function onEventsReady(e) {
+                imax = e.length;
                 var tmpl = $.templates(config.template.markerpopup);
                 var eventIcon = L.icon(config.icons.events);
                 for (var i=0; i<imax; i++) {
@@ -142,7 +144,6 @@
 
             function onAllEventsReady() {
                 console.log('alleventready');
-                map.addLayer(clusters['events']);
             }
 
             function onError(type) {
@@ -176,31 +177,31 @@ $.ggw.eventsmap('#js-ggw-eventsmap', {
     startzoom : 2,
     parameters : [{
             domain : 'netherlands'
-        //},{
-        //    domain : 'thailand'
-        //},{
-        //    domain : 'belgium'
-        //},{
-        //    domain : 'russia'
-        //},{
-        //    domain : 'brazil'
-        //},{
-        //    domain : 'new-zealand'
-        //},{
-        //    domain : 'nordic'
-        //},{
-        //    domain : 'usa'
-        //},{
-        //    domain : 'uk'
-        //},{
-        //    domain : 'india'
-        //},{
-        //    domain : 'africa'
-        //},{
-        //    domain : 'canada'
-        //},{
-        //    domain : 'mexico'
-        //},{
-        //    domain : 'indonesia'
+        },{
+            domain : 'thailand'
+        },{
+            domain : 'belgium'
+        },{
+            domain : 'russia'
+        },{
+            domain : 'brazil'
+        },{
+            domain : 'new-zealand'
+        },{
+            domain : 'nordic'
+        },{
+            domain : 'usa'
+        },{
+            domain : 'uk'
+        },{
+            domain : 'india'
+        },{
+            domain : 'africa'
+        },{
+            domain : 'canada'
+        },{
+            domain : 'mexico'
+        },{
+            domain : 'indonesia'
     }]
 });
