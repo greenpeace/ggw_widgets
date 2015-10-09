@@ -136,6 +136,7 @@
                     var grps = e[i]['groups'];
                     grps = grps[Object.keys(grps)[0]].domain;
                     e[i]['domain'] = grps;
+                    e[i]['picture']=e[i]['picture'].replace('avatar',"extra_large");
                     clusters['events'].addLayer(new L.marker([
                             e[i]['location']['coordinates']['latitude'],
                             e[i]['location']['coordinates']['longitude']
