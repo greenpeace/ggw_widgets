@@ -34,9 +34,10 @@
 <script src="js/ggw-map.js" type="text/javascript"></script>
 <!-- templates -->
 <script id="popupItemTemplate" type="text/x-jsrender">
-    <div class="popup-content">
-        <strong> {{:name}} </strong>
-         {{:friendly_date}}
+    <div class="popup-content" style='overflow:scroll;max-height:350px'>
+        <strong> <a href="https://greenwire.greenpeace.org/{{:domain}}/node/{{:serial}}">{{:name}}</a></strong> - <i style='color:rgba(0,0,0,0.4)'>{{:friendly_date}}</i>
+        <img style="width:100%" src="{{:picture}}">
+        <p>{{:description}}</p>
     </div>
 </script>
 

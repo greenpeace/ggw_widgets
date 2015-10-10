@@ -133,6 +133,10 @@
                 var eventIcon = L.icon(config.icons.events);
                 for (var i=0; i<imax; i++) {
                     e[i]['friendly_date'] = moment(e[i]['start_date']).fromNow();
+                    var grps = e[i]['groups'];
+                    grps = grps[Object.keys(grps)[0]].domain;
+                    e[i]['domain'] = grps;
+                    e[i]['picture']=e[i]['picture'].replace('avatar',"extra_large");
                     clusters['events'].addLayer(new L.marker([
                             e[i]['location']['coordinates']['latitude'],
                             e[i]['location']['coordinates']['longitude']
