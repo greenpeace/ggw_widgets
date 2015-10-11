@@ -1,0 +1,478 @@
+[{
+        "office_name": "Greenpeace International",
+        "office_url": "http://www.greenpeace.org/international/",
+        "location": {
+            "country": "The Netherlands",
+            "streetname": "Ottho Heldringstraat 5",
+            "postcode": "1066 AZ",
+            "city": "Amsterdam",
+            "state": "",
+            "coordinates": {
+                "latitude": "52.3503644",
+                "longitude": "4.832657"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace EU Unit",
+        "office_url": "http://www.greenpeace.org/eu-unit/",
+        "location": {
+            "country": "Belgium",
+            "streetname": "Belliardstraat 199 Rue Belliard",
+            "postcode": "1040",
+            "city": "Brussels",
+            "state": "",
+            "coordinates": {
+                "latitude": "50.8395995",
+                "longitude": "4.3843395"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Research Laboratories",
+        "office_url": "http://www.greenpeace.org/international/en/about/greenpeace-science-unit-2/",
+        "location": {
+            "country": "United Kingdom",
+            "streetname": "School of Biosciences, Innovation Centre Phase 2, Rennes Drive, University of Exeter",
+            "postcode": "EX4 4RN",
+            "city": "Exeter, Devon",
+            "state": "",
+            "coordinates": {
+                "latitude": "50.737137",
+                "longitude": "-3.535148"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Africa",
+        "office_url": "http://www.greenpeace.org/africa/",
+        "location": {
+            "country": "South Africa",
+            "streetname": "10A and 10B Clamart Road",
+            "postcode": "",
+            "city": "Richmond, Johannesburg",
+            "state": "",
+            "coordinates": {
+                "latitude": "-26.1809",
+                "longitude": "28.01318"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Africa",
+        "office_url": "http://www.greenpeace.org/africa/",
+        "location": {
+            "country": "Senegal",
+            "streetname": "2 Avenue Hassan II, 6ème  Etage",
+            "postcode": "",
+            "city": "Dakar",
+            "state": "",
+            "coordinates": {
+                "latitude": "14.669757",
+                "longitude": "-17.429103"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Argentina",
+        "office_url": "http://www.greenpeace.org/argentina/",
+        "location": {
+            "country": "Argentina",
+            "streetname": "Zabala 3873",
+            "postcode": "C1427DYG",
+            "city": "Ciudad de Buenos Aires",
+            "state": "",
+            "coordinates": {
+                "latitude": "-34.582727",
+                "longitude": "-58.458751"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Australia Pacific",
+        "office_url": "http://www.greenpeace.org/australia/",
+        "location": {
+            "country": "Australia",
+            "streetname": "Level 2, 33 Mountain Street",
+            "postcode": "2007",
+            "city": "Ultimo",
+            "state": "NSW",
+            "coordinates": {
+                "latitude": "-33.882324",
+                "longitude": "151.195894"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Belgium",
+        "office_url": "http://www.greenpeace.org/belgium",
+        "location": {
+            "country": "Belgium",
+            "streetname": "Haachtsesteenweg 159, chaussée de Haecht",
+            "postcode": "1030",
+            "city": "Brussels",
+            "state": "",
+            "coordinates": {
+                "latitude": "50.8598155",
+                "longitude": "4.3708053"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Brasil",
+        "office_url": "http://www.greenpeace.org/brasil/",
+        "location": {
+            "country": "Brazil",
+            "streetname": "Rua Fradique Coutinho, 352 - Pinheiros - São Paulo",
+            "postcode": "CEP 05416-000",
+            "city": "São Paulo",
+            "state": "",
+            "coordinates": {
+                "latitude": "-23.5634569",
+                "longitude": "-46.686028"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Canada",
+        "office_url": "http://www.greenpeace.org/canada/",
+        "location": {
+            "country": "Canada",
+            "streetname": "33 Cecil Street",
+            "postcode": "M5T 1N1",
+            "city": "Toronto",
+            "state": "Ontario",
+            "coordinates": {
+                "latitude": "43.6564602",
+                "longitude": "-79.396385"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Canada",
+        "office_url": "http://www.greenpeace.org/canada/",
+        "location": {
+            "country": "Canada",
+            "streetname": "Unit B, 8617 104 St NW",
+            "postcode": "T6E 4G6",
+            "city": "Edmonton",
+            "state": "Alberta",
+            "coordinates": {
+                "latitude": "53.522236",
+                "longitude": "-113.497003"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Canada",
+        "office_url": "http://www.greenpeace.org/canada/",
+        "location": {
+            "country": "Canada",
+            "streetname": "1726 Commercial Drive",
+            "postcode": "V5N 4A3",
+            "city": "Vancouver",
+            "state": "British Columbia",
+            "coordinates": {
+                "latitude": "49.2692232",
+                "longitude": "-123.069418"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Canada",
+        "office_url": "http://www.greenpeace.org/canada/",
+        "location": {
+            "country": "Canada",
+            "streetname": "71 Bank St, 6th floor",
+            "postcode": "K1P 5N2",
+            "city": "Ottawa",
+            "state": "ON",
+            "coordinates": {
+                "latitude": "45.4209293",
+                "longitude": "-75.70087910000001"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Canada",
+        "office_url": "http://www.greenpeace.org/canada/",
+        "location": {
+            "country": "Canada",
+            "streetname": "870 Ave de Salaberry Suite.104",
+            "postcode": "G1R 2T9",
+            "city": "QC",
+            "state": "Québec",
+            "coordinates": {
+                "latitude": "46.80577",
+                "longitude": "-71.227333"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Austria",
+        "office_url": "http://www.greenpeace.org/austria/",
+        "location": {
+            "country": "Austria",
+            "streetname": "Fernkorngasse 10",
+            "postcode": "1100",
+            "city": "Vienna",
+            "state": "",
+            "coordinates": {
+                "latitude": "48.179659",
+                "longitude": "16.36398"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Bulgaria",
+        "office_url": "http://www.greenpeace.org/bulgaria/",
+        "location": {
+            "country": "",
+            "streetname": "Bull. Janko Sakazov 11 B, ground floor, ap. 2",
+            "postcode": "1504",
+            "city": "Sofia",
+            "state": "",
+            "coordinates": {
+                "latitude": "42.696597",
+                "longitude": "23.336779"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Hrvatska",
+        "office_url": "http://www.greenpeace.org/croatia/",
+        "location": {
+            "country": "Croatia",
+            "streetname": "Zeleni trg 3",
+            "postcode": "10000",
+            "city": "Zagreb",
+            "state": "",
+            "coordinates": {
+                "latitude": "45.7949389",
+                "longitude": "15.96229"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Magyarország",
+        "office_url": "http://www.greenpeace.org/hungary/",
+        "location": {
+            "country": "Hungary",
+            "streetname": "Zászlós u. 54",
+            "postcode": "1143",
+            "city": "Budapest",
+            "state": "",
+            "coordinates": {
+                "latitude": "47.5064982",
+                "longitude": "19.105866"
+            }
+        }
+    },
+
+    {
+        "office_name": "Fundacja Greenpeace Polska",
+        "office_url": "http://www.greenpeace.org/poland/",
+        "location": {
+            "country": "Poland",
+            "streetname": "ul. Altowa 4",
+            "postcode": "02-386",
+            "city": "Warszawa",
+            "state": "",
+            "coordinates": {
+                "latitude": "52.2008862",
+                "longitude": "20.9621"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Romania",
+        "office_url": "http://www.greenpeace.org/romania/",
+        "location": {
+            "country": "Romania",
+            "streetname": "Strada Ing. Vasile Cristescu, Nr. 18",
+            "postcode": "",
+            "city": "Sector 2, Bucuresti",
+            "state": "",
+            "coordinates": {
+                "latitude": "44.4512038",
+                "longitude": "26.13389"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Slovensko",
+        "office_url": "http://www.greenpeace.org/slovakia/",
+        "location": {
+            "country": "Slovakia",
+            "streetname": "Vančurova 7",
+            "postcode": "814 99",
+            "city": "Bratislava 1",
+            "state": "",
+            "coordinates": {
+                "latitude": "48.1604",
+                "longitude": "17.1076"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Slovenia",
+        "office_url": "http://www.greenpeace.org/slovenia/",
+        "location": {
+            "country": "Slovenia",
+            "streetname": "Kladezna ulica 12",
+            "postcode": "SI-1000",
+            "city": "Ljubljana",
+            "state": "",
+            "coordinates": {
+                "latitude": "46.044533",
+                "longitude": "14.503709"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Chile",
+        "office_url": "http://www.greenpeace.org/chile/",
+        "location": {
+            "country": "Chile",
+            "streetname": "Argomedo 50",
+            "postcode": "",
+            "city": "Santiago Centro",
+            "state": "",
+            "coordinates": {
+                "latitude": "-33.449049",
+                "longitude": "-70.6327"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Česká republika",
+        "office_url": "http://www.greenpeace.org/czech/",
+        "location": {
+            "country": "Czech Republic",
+            "streetname": "Prvniho pluku 12",
+            "postcode": "186 00",
+            "city": "Praha 8",
+            "state": "",
+            "coordinates": {
+                "latitude": "50.0915821",
+                "longitude": "14.4426095"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Danmark",
+        "office_url": "http://www.greenpeace.org/denmark/da/",
+        "location": {
+            "country": "Denmark",
+            "streetname": "Njalsgade 21",
+            "postcode": "2300",
+            "city": "København S",
+            "state": "",
+            "coordinates": {
+                "latitude": "55.666477",
+                "longitude": "12.580365"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Hong Kong",
+        "office_url": "http://www.greenpeace.org/hk/",
+        "location": {
+            "country": "Hong Kong",
+            "streetname": "8/F, Pacific Plaza, 410-418 Des Voeux Road West",
+            "postcode": "",
+            "city": "",
+            "state": "",
+            "coordinates": {
+                "latitude": "22.2865319",
+                "longitude": "114.1357"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace East Asia",
+        "office_url": "http://www.greenpeace.org.cn/",
+        "location": {
+            "country": "China",
+            "streetname": "Third Floor, Julong Office Building, 7 Julong Garden, 68 Xinzhong Street",
+            "postcode": "100027",
+            "city": "Beijing",
+            "state": "Dongcheng District",
+            "coordinates": {
+                "latitude": "39.928353",
+                "longitude": "116.416357"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Taiwan",
+        "office_url": "http://www.greenpeace.org/taiwan/zh/",
+        "location": {
+            "country": "",
+            "streetname": "No.10, Ln. 83, Sec. 1, Roosevelt Rd.,",
+            "postcode": "10093",
+            "city": "Taipei City 10093",
+            "state": "Zhongzheng District",
+            "coordinates": {
+                "latitude": "25.021224",
+                "longitude": "121.527155"
+            }
+        }
+    },
+
+    {
+        "office_name": "Greenpeace Korea",
+        "office_url": "http://www.greenpeace.org/korea/",
+        "location": {
+            "country": "South Korea",
+            "streetname": "6F Cheongryong bldg 257, Hangang-daero",
+            "postcode": "(140-759)",
+            "city": "Seoul",
+            "state": "Yongsan-gu",
+            "coordinates": {
+                "latitude": "37.5359824",
+                "longitude": "126.97135"
+            }
+        }
+    }, {
+        "office_name": "国際環境NGOグリーンピース",
+        "office_url": "http://www.greenpeace.org/japan/",
+        "location": {
+            "country": "Japan",
+            "streetname": "",
+            "postcode": "",
+            "city": "",
+            "state": "-",
+            "coordinates": {
+                "latitude": "42.5359824",
+                "longitude": "160.97135"
+            }
+        }
+    }
+]
