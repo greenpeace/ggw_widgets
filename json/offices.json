@@ -433,6 +433,126 @@
             }
         }
     },
+    {
+        "office_name": "Greenpeace Suomi",
+        "office_url": "http://www.greenpeace.org/finland/“,
+        "location": {
+            "country": “Finland,
+            "streetname": "Käenkuja 3 a B",
+            "postcode": "00500",
+            "city": "Helsinki",
+            "state": "",
+            "coordinates": {
+                "latitude": "60.185433”,
+                "longitude": "24.963905"
+            }
+        }
+    },
+    {
+        "office_name": "Greenpeace France",
+        "office_url": "http://www.greenpeace.org/france/",
+        "location": {
+            "country": “France”,
+            "streetname": "13 rue d'Enghien",
+            "postcode": "75010",
+            "city": "Paris",
+            "state": "",
+            "coordinates": {
+                "latitude": "48.871637”,
+                "longitude": "2.3521"
+            }
+        }
+    },
+    {
+        "office_name": "Greenpeace Luxembourg",
+        "office_url": "http://www.greenpeace.org/luxembourg/",
+        "location": {
+            "country": "Luxembourg",
+            "streetname": "34 Avenue de la Gare",
+            "postcode": "4130",
+            "city": "Esch/Alzette",
+            "state": "",
+            "coordinates": {
+                "latitude": "49.494877 ",
+                "longitude": "5.982612"
+            }
+        }
+    },
+    {
+        "office_name": "Greenpeace Germany",
+        "office_url": "http://www.greenpeace.de/",
+        "location": {
+            "country": "Germany",
+            "streetname": "Hongkongstrasse 10",
+            "postcode": "20457",
+            "city": "Hamburg",
+            "state": "",
+            "coordinates": {
+                "latitude": "53.541921",
+                "longitude": "10.001646"
+            }
+        }
+    },
+    {
+        "office_name": "Berlin political office",
+        "office_url": "http://www.greenpeace.de/",
+        "location": {
+            "country": "Germany",
+            "streetname": "Marienstrasse 19-20",
+            "postcode": "10117",
+            "city": "Berlin",
+            "state": "",
+            "coordinates": {
+                "latitude": "52.52233",
+                "longitude": "13.38364"
+            }
+        }
+    },
+    {
+        "office_name": "Greenpeace Greece",
+        "office_url": "http://www.greenpeace.org/greece/",
+        "location": {
+            "country": "Greece",
+            "streetname": "Kolonou 78",
+            "postcode": "104 37",
+            "city": "Athens",
+            "state": "",
+            "coordinates": {
+                "latitude": "37.985999",
+                "longitude": "23.720033"
+            }
+        }
+    },
+    {
+        "office_name": "Greenpeace India",
+        "office_url": "http://www.greenpeace.org/india/",
+        "location": {
+            "country": "India",
+            "streetname": "No.338, 8th Cross, Wilson Garden",
+            "postcode": "560 027",
+            "city": "Bangalore",
+            "state": "",
+            "coordinates": {
+                "latitude": "12.950413",
+                "longitude": "77.597744"
+            }
+        }
+    },
+    {
+        "office_name": "Greenpeace Italy",
+        "office_url": "http://www.greenpeace.org/italy/",
+        "location": {
+            "country": "Italy",
+            "streetname": "Via della Cordonata",
+            "postcode": "7 - 00187",
+            "city": "Roma",
+            "state": "",
+            "coordinates": {
+                "latitude": "12.950413",
+                "longitude": "77.597744"
+            }
+        }
+    },
     {        "office_name": "国際環境NGOグリーンピース",
         "office_url": "http://www.greenpeace.org/japan/",
         "location": {
@@ -688,4 +808,3 @@
         }
     }
 ]
-
