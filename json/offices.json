@@ -435,15 +435,15 @@
     },
     {
         "office_name": "Greenpeace Suomi",
-        "office_url": "http://www.greenpeace.org/finland/“,
+        "office_url": "http://www.greenpeace.org/finland/",
         "location": {
-            "country": “Finland,
+            "country": "Finland",
             "streetname": "Käenkuja 3 a B",
             "postcode": "00500",
             "city": "Helsinki",
             "state": "",
             "coordinates": {
-                "latitude": "60.185433”,
+                "latitude": "60.185433",
                 "longitude": "24.963905"
             }
         }
@@ -452,13 +452,13 @@
         "office_name": "Greenpeace France",
         "office_url": "http://www.greenpeace.org/france/",
         "location": {
-            "country": “France”,
+            "country": "France",
             "streetname": "13 rue d'Enghien",
             "postcode": "75010",
             "city": "Paris",
             "state": "",
             "coordinates": {
-                "latitude": "48.871637”,
+                "latitude": "48.871637",
                 "longitude": "2.3521"
             }
         }
