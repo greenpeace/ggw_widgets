@@ -160,48 +160,45 @@
     };
 
 })( jQuery );
-
-/* events widget */
-$.ggw.eventsmap('#js-ggw-eventsmap', {
-    // baseUrl : 'http://localhost/ggw_widgets/json/events.json'
-    //baseUrl	: 'https://greenwire-stage.greenpeace.org/api/public/events.json',
-    baseUrl	: 'https://greenwire.greenpeace.org/api/public/events.json',
-    //baseUrl : 'http://www.greenpeace.nl/Global/nederland/greenwire/json/events.json'
-    center : {
-        lat : 52,
-        long: 5
-    },
-    center: {  lat  : 0, long : 0 },
-    maxzoom :12,
-    minzoom : 1,
-    startzoom : 2,
-    parameters : [{
-            domain : 'netherlands'
-        },{
-            domain : 'thailand'
-        },{
-            domain : 'belgium'
-        },{
-            domain : 'russia'
-        },{
-            domain : 'brazil'
-        },{
-            domain : 'new-zealand'
-        },{
-            domain : 'nordic'
-        },{
-            domain : 'usa'
-        },{
-            domain : 'uk'
-        },{
-            domain : 'india'
-        },{
-            domain : 'africa'
-        },{
-            domain : 'canada'
-        },{
-            domain : 'mexico'
-        },{
-            domain : 'indonesia'
-    }]
-});
+//
+///* events widget EXAMPLE */
+//$.ggw.eventsmap('#js-ggw-eventsmap', {
+//    baseUrl	: 'https://greenwire.greenpeace.org/api/public/events.json',
+//    center : {
+//        lat : 52,
+//        long: 5
+//    },
+//    center: {  lat  : 0, long : 0 },
+//    maxzoom :12,
+//    minzoom : 1,
+//    startzoom : 2,
+//    parameters : [{
+//            domain : 'netherlands'
+//        },{
+//            domain : 'thailand'
+//        },{
+//            domain : 'belgium'
+//        },{
+//            domain : 'russia'
+//        },{
+//            domain : 'brazil'
+//        },{
+//            domain : 'new-zealand'
+//        },{
+//            domain : 'nordic'
+//        },{
+//            domain : 'usa'
+//        },{
+//            domain : 'uk'
+//        },{
+//            domain : 'india'
+//        },{
+//            domain : 'africa'
+//        },{
+//            domain : 'canada'
+//        },{
+//            domain : 'mexico'
+//        },{
+//            domain : 'indonesia'
+//    }]
+//});

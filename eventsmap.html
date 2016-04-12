@@ -2,7 +2,7 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="nl"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -35,10 +35,28 @@
 <!-- templates -->
 <script id="popupItemTemplate" type="text/x-jsrender">
     <div class="popup-content">
-        <strong> {{:name}} </strong>
-         {{:friendly_date}}
+        <strong> {{:name}} </strong><br>
+         {{:friendly_date}}<br>
     </div>
 </script>
+<script>
 
+    /* events widget */
+    $.ggw.eventsmap('#js-ggw-eventsmap', {
+        baseUrl	: 'https://greenwire.greenpeace.org/api/public/events.json',
+        center : {
+            lat : 51.5,
+            long: 0.1
+        },
+        maxzoom :12,
+        minzoom : 1,
+        startzoom : 6,
+        parameters : [{
+            domain : 'uk',
+            group : 'South West London Greenpeace'
+        }]
+    });
+
+</script>
 </body>
 </html>
