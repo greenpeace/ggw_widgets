@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Members | Greenpeace Greenwire</title>
+    <title>Groups Map | Greenpeace Greenwire</title>
     <meta name="description" content="Greenpeace Greenwire - Events map widget demo"/>
     <meta name="keywords" content="greenpeace, greenwire"/>
     <meta name="viewport" content="width=device-width"/>
@@ -21,7 +21,7 @@
 <body>
 <div id="root-container" class="greenwire">
     <div class="ggw">
-        <div id="js-ggw-eventsmap" class="fullheight"></div>
+        <div id="js-ggw-groupsmap" class="fullheight"></div>
     </div>
 </div>
 
@@ -44,7 +44,7 @@
 
 <script>
 
-    $.ggw.eventsmap('#js-ggw-eventsmap', {
+    $.ggw.eventsmap('#js-ggw-groupsmap', {
         baseUrl	: 'https://greenwire.greenpeace.org/api/public/events.json',
         center : {
             lat : 51.5,
@@ -54,8 +54,7 @@
         minzoom : 1,
         startzoom : 6,
         parameters : [{
-            domain : 'uk',
-            group : 'South West London Greenpeace'
+            domain : 'uk'
         }]
     });
 

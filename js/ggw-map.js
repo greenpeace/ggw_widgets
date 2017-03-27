@@ -94,6 +94,9 @@
                             if(response['body']['events'] != undefined) {
                                 onEventsReady(response['body']['events']);
                             } else {
+                                if(response['body']['groups'] != undefined) {
+                                    onGroupsReady(response['body']['groups']);
+                                }
                                 //console.log('undefined for:' + done);
                             }
                             if(done == param.length) {
@@ -145,9 +148,23 @@
                     );
                 }
             }
+            function onGroupsReady(e) {
+                imax = e.length;
+                var tmpl = $.templates(config.template.markerpopup);
+                var eventIcon = L.icon(config.icons.events);
+                for (var i=0; i<imax; i++) {
+                    e[i]['friendly_date'] = moment(e[i]['start_date']).fromNow();
+                    clusters['groups'].addLayer(new L.marker([
+                          e[i]['location']['coordinates']['latitude'],
+                          e[i]['location']['coordinates']['longitude']
+                      ], {icon: eventIcon})
+                        .bindPopup(tmpl(e[i]))
+                    );
+                }
+            }
 
             function onAllEventsReady() {
-                console.log('alleventready');
+                //console.log('alleventready');
             }
 
             function onError(type) {
