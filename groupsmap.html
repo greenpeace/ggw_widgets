@@ -45,7 +45,7 @@
 <script>
 
     $.ggw.eventsmap('#js-ggw-groupsmap', {
-        baseUrl	: 'https://greenwire.greenpeace.org/api/public/events.json',
+        baseUrl	: 'https://greenwire.greenpeace.org/api/public/groups.json',
         center : {
             lat : 51.5,
             long: 0.1
@@ -54,7 +54,8 @@
         minzoom : 1,
         startzoom : 6,
         parameters : [{
-            domain : 'uk'
+            domain : 'uk',
+            limit: 130
         }]
     });
 

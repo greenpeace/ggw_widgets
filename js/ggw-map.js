@@ -128,6 +128,10 @@
                 // build the cluster groups
                 clusters['events'] = new L.MarkerClusterGroup();
                 map.addLayer(clusters['events']);
+
+                // build the cluster groups
+                clusters['groups'] = new L.MarkerClusterGroup();
+                map.addLayer(clusters['groups']);
             }
 
             function onEventsReady(e) {
@@ -153,7 +157,8 @@
                 var tmpl = $.templates(config.template.markerpopup);
                 var eventIcon = L.icon(config.icons.events);
                 for (var i=0; i<imax; i++) {
-                    e[i]['friendly_date'] = moment(e[i]['start_date']).fromNow();
+                    console.log(e[i]);
+                    e[i]['friendly_date'] = moment(e[i]['created']).fromNow();
                     clusters['groups'].addLayer(new L.marker([
                           e[i]['location']['coordinates']['latitude'],
                           e[i]['location']['coordinates']['longitude']
